@@ -1,0 +1,182 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #222;
+  height: 70px;
+  padding: 20px;
+  color: white;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.App-header > a {
+  color: white;
+  text-decoration: none;
+  height: auto;
+}
+
+.App-header > a:hover {
+  cursor: pointer;
+}
+
+.App-title {
+  font-size: 2em;
+}
+
+.pizza-list {
+  display: flex;
+  flex-wrap: wrap;
+  border: 2px solid black;
+}
+
+.pizza-card {
+  width: 20%;
+
+  margin: 20px;
+  background-color: rgb(246, 160, 0);
+}
+
+.pizza-img {
+  width: 100%;
+}
+
+.nav > a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  width: 200px;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav > a:hover {
+  cursor: pointer;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-inline: auto;
+  margin-block: 20px;
+}
+
+.home-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.home-page > p {
+  font-size: 30px;
+}
+
+.nav > a {
+  color: black;
+}
+
+.next-btn {
+  width: 200px;
+  height: 75px;
+  margin: 50px;
+  font-size: 20px;
+}
+
+.nav,a {
+  text-decoration: none;
+  color: yellow;
+  transition: background-color 1s;
+  background-color: black;
+}
+.nav,a:hover {
+  background-color: red;
+  scale: 1;
+}
+p {
+  font-size: 20px;
+  font-family: cursive;
+}
+
+.customer-info {
+  width: 80vw;
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  align-items: center;
+}
+li {
+  list-style: none;
+  text-align: left;
+  font-size: 25px;
+}
+
+.order-type {
+  font-size: 25px;
+  font-weight: normal;
+}
+
+table {
+  margin-left: 135px;
+  padding: 10px;
+  margin: 20px;
+  text-align: left;
+  min-width: 600px;
+  margin-inline: auto;
+  background-color: beige;
+  border: 1px solid black;
+  border-collapse: collapse;
+  font-size: 15px;
+}
+
+td,
+tr,
+th {
+  border: 1px solid black;
+  padding: 10px;
+}
+
+tr:nth-child(odd) {
+  background-color: antiquewhite;
+}
+
+#form-container {
+  background-color: cadetblue;
+}
+input {
+  padding: 9px;
+  border: 20px;
+}
+.pizza-list,
+.App {
+  /* background-color: blanchedalmond; */
+  background: linear-gradient(0.2turn, rgb(221, 25, 25), blanchedalmond);
+}
+
+.order-btn {
+  width: 150px;
+  height: 60px;
+  font-size: 20px;
+  background-color: transparent;
+  border: 2px solid white;
+  margin: 20px;
+}
+
+.order-btn > a {
+  text-decoration: none;
+  color: white;
+}
+
+.order-btn:hover {
+  scale: 103%;
+}
+
+.order-btn:active {
+  scale: 97%;
+}
