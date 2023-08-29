@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 export default function PizzaOrder({ addOrder }) {
   const order = useSelector((store) => store.orderReducer);
   console.log(order.pizzas);
- 
 
   return (
     <>
@@ -24,7 +23,6 @@ export default function PizzaOrder({ addOrder }) {
           <tr>
             <th>Pizza Name</th>
             <th>Price</th>
-            
           </tr>
         </thead>
         <tbody>
@@ -40,8 +38,6 @@ export default function PizzaOrder({ addOrder }) {
 
       <button className="order-btn" onClick={addOrder}>
         <Link to="/pizza">Place Order</Link>
-        
-        
       </button>
     </>
   );

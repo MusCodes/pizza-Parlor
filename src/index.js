@@ -33,7 +33,7 @@ const orderReducer = (state = { pizzas: [], total: 0 }, action) => {
   } else if (action.type === "HANDLE_INFO") {
     return { ...state, ...action.payload };
   } else if (action.type === "CLEAR") {
-    return  { pizzas: [], total: 0 }; ;
+    return { pizzas: [], total: 0 };
   } else if (action.type === "REMOVE_PIZZA") {
     let newState = [...state.pizzas];
     let index = newState.findIndex((el) => el.id === action.payload.id);
