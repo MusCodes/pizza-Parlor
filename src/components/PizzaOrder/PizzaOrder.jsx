@@ -1,5 +1,7 @@
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 
 import { Link } from "react-router-dom";
 
@@ -34,6 +36,7 @@ export default function PizzaOrder({ addOrder }) {
           ))}
         </tbody>
       </table>
+      {/* <FontAwesomeIcon icon="fa-solid fa-cart-shopping" /> */}
       <h2>Total: ${order.total}</h2>
 
       <button className="order-btn" onClick={addOrder}>

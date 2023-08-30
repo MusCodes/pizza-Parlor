@@ -29,13 +29,18 @@ export default function PizzaForm() {
 
   // Dispatch customer info when selecting next
   function handleCustomerInfo() {
+    if (!name || !address || !city || !zip || !deliveryOption) {
+      console.log("Please fill out all required fields before proceeding.");
+      return; 
+    }
+  
     console.log("in handleCustomerInfo");
-    history.push("/order");
-    <Link to="/order" />;
-
     dispatch({ type: "HANDLE_INFO", payload: newCustomerInfo });
+    history.push("/order");
   }
+  
   return (
+    <form>
     <>
       <div id="form-container">
         <h2>Step 2: Customer Information</h2>
@@ -83,6 +88,7 @@ export default function PizzaForm() {
               value="Pickup"
               checked={deliveryOption === "Pickup"}
               onChange={onDeliveryOptionChange}
+              required
             />
             Pickup
           </label>
@@ -94,16 +100,18 @@ export default function PizzaForm() {
               value="Delivery"
               checked={deliveryOption === "Delivery"}
               onChange={onDeliveryOptionChange}
+              required
             />
             Delivery
           </label>
         </div>
         <div>
-          <button type="button" onClick={handleCustomerInfo}>
+          <button type="submit" onClick={handleCustomerInfo}>
             Next
           </button>
         </div>
       </div>
     </>
+      </form>
   );
 }
