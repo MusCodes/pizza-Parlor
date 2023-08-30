@@ -1,12 +1,17 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { HashRouter as Router, Route, Link, useHistory } from "react-router-dom";
+import {
+  HashRouter as Router,
+  Route,
+  Link,
+  useHistory,
+} from "react-router-dom";
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
- 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
+
 export default function PizzaList() {
-  const history=useHistory();
+  const history = useHistory();
   const pizzaList = useSelector((store) => store.pizzaReducer);
   const order = useSelector((store) => store.orderReducer);
   const dispatch = useDispatch();
@@ -16,9 +21,9 @@ export default function PizzaList() {
   const [price, setPrice] = useState("");
   const [name, setName] = useState("");
   const total = order.total;
-  const nextPage = () =>{
-    history.push("/form")
-  }
+  const nextPage = () => {
+    history.push("/form");
+  };
 
   const removeCart = (id, price) => {
     let obj = {
@@ -48,7 +53,14 @@ export default function PizzaList() {
     <>
       <header>
         <h2>Select Your Pizza!</h2>
-        <h2>  <FontAwesomeIcon icon={faCartShopping} style={{fontSize: '48px', marginRight: '10px'}} /> ${total ? total : 0}</h2>
+        <h2>
+          {" "}
+          <FontAwesomeIcon
+            icon={faCartShopping}
+            style={{ fontSize: "48px", marginRight: "10px" }}
+          />{" "}
+          ${total ? total : 0}
+        </h2>
       </header>
       <div className="pizza-list">
         {pizzaList.map((pizza, index) => (
@@ -70,11 +82,9 @@ export default function PizzaList() {
           </div>
         ))}
       </div>
-      <button className="order-btn" onClick={nextPage}> 
+      <button className="order-btn" onClick={nextPage}>
         <Link to="/form">Next</Link>
       </button>
     </>
   );
 }
-
-
