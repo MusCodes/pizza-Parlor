@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { HashRouter as Router, Route, Link } from "react-router-dom";
-
+import { HashRouter as Router, Route, Link, useHistory } from "react-router-dom";
+ 
 export default function PizzaList() {
+  const history=useHistory();
   const pizzaList = useSelector((store) => store.pizzaReducer);
   const order = useSelector((store) => store.orderReducer);
   const dispatch = useDispatch();
@@ -12,11 +13,9 @@ export default function PizzaList() {
   const [price, setPrice] = useState("");
   const [name, setName] = useState("");
   const total = order.total;
-  console.log(id);
-  console.log(quantity);
-  console.log(price);
-
-  console.log(order);
+  const nextPage = () =>{
+    history.push("/form")
+  }
 
   const removeCart = (id, price) => {
     let obj = {
@@ -68,7 +67,7 @@ export default function PizzaList() {
           </div>
         ))}
       </div>
-      <button className="next-btn">
+      <button className="next-btn" onClick={nextPage}> 
         <Link to="/form">Next</Link>
       </button>
     </>

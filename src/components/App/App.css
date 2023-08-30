@@ -81,14 +81,14 @@
   color: black;
 }
 
-.next-btn {
+/* .next-btn {
   width: 200px;
   height: 75px;
   margin: 50px;
   font-size: 20px;
-}
+} */
 
-.nav,a {
+.nav {
   text-decoration: none;
   color: yellow;
   transition: background-color 1s;
@@ -178,5 +178,27 @@ input {
 }
 
 .order-btn:active {
+  scale: 97%;
+}
+
+.next-btn {
+  width: 150px;
+  height: 60px;
+  font-size: 20px;
+  background-color: transparent;
+  border: 2px solid white;
+  margin: 20px;
+}
+
+.next-btn > a {
+  text-decoration: none;
+  color: black;
+}
+
+.next-btn:hover {
+  scale: 103%;
+}
+
+.next-btn:active {
   scale: 97%;
 }

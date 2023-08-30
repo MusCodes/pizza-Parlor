@@ -59,7 +59,7 @@ function App() {
       <div className="App">
         <header className="App-header">
           <Link to="/">
-            <h1 className="App-title">Iwatani Pizza</h1>
+            <h1 className="App-title">Fargo Pizza</h1>
           </Link>
         </header>
         <Switch>
