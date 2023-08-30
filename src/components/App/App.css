@@ -81,12 +81,6 @@
   color: black;
 }
 
-/* .next-btn {
-  width: 200px;
-  height: 75px;
-  margin: 50px;
-  font-size: 20px;
-} */
 
 .nav {
   text-decoration: none;
@@ -161,27 +155,7 @@ input {
   background: linear-gradient(0.2turn, rgb(221, 25, 25), blanchedalmond);
 }
 
-/* .order-btn {
-  width: 150px;
-  height: 60px;
-  font-size: 20px;
-  background-color: transparent;
-  border: 2px solid white;
-  margin: 20px;
-} */
 
-/* .order-btn > a {
-  text-decoration: none;
-  color: white;
-}
-
-.order-btn:hover {
-  scale: 103%;
-}
-
-.order-btn:active {
-  scale: 97%;
-} */
 .order-btn {
   text-decoration: none;
   color: yellow;
@@ -220,26 +194,3 @@ input {
   margin-block: 20px;
 }
 
-
-.next-btn {
-  width: 150px;
-  height: 60px;
-  font-size: 20px;
-  background-color: transparent;
-  border: 2px solid white;
-  margin: 20px;
-}
-
-.next-btn > a {
-  text-decoration: none;
-  color: black;
-}
-
-.next-btn:hover {
-  scale: 103%;
-  color:black
-}
-
-.next-btn:active {
-  scale: 97%;
-}
