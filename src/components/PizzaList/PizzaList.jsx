@@ -1,6 +1,9 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { HashRouter as Router, Route, Link, useHistory } from "react-router-dom";
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
  
 export default function PizzaList() {
   const history=useHistory();
@@ -45,7 +48,7 @@ export default function PizzaList() {
     <>
       <header>
         <h2>Select Your Pizza!</h2>
-        <h2>Total: ${total ? total : 0}</h2>
+        <h2>  <FontAwesomeIcon icon={faCartShopping} style={{fontSize: '48px', marginRight: '10px'}} /> ${total ? total : 0}</h2>
       </header>
       <div className="pizza-list">
         {pizzaList.map((pizza, index) => (
