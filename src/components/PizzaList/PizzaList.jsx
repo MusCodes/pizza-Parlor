@@ -67,9 +67,11 @@ export default function PizzaList() {
           </div>
         ))}
       </div>
-      <button className="next-btn" onClick={nextPage}> 
+      <button className="order-btn" onClick={nextPage}> 
         <Link to="/form">Next</Link>
       </button>
     </>
   );
 }
+
+

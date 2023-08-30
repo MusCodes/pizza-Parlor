@@ -14,11 +14,16 @@ export default function PizzaOrder({ addOrder }) {
       <h2>Checkout</h2>
       <div className="customer-info">
         <ul className="list">
+          <h1>Customer Information</h1>
           <li>{order.customer_name}</li>
           <li>{order.street_address}</li>
           <li>{order.city}</li>
         </ul>
-        <h3 className="order-type">{order.type ? `For ${order.type}` : ""}</h3>
+        <ul className="list">
+          <h1>Method</h1>
+        <li className="order-type">{order.type ? `For ${order.type}` : ""}</li>
+
+        </ul>
       </div>
       <table>
         <thead>

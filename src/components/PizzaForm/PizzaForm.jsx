@@ -106,7 +106,7 @@ export default function PizzaForm() {
           </label>
         </div>
         <div>
-          <button type="submit" onClick={handleCustomerInfo}>
+          <button className="order-btn" type="submit" onClick={handleCustomerInfo}>
             Next
           </button>
         </div>

@@ -147,7 +147,9 @@ tr:nth-child(odd) {
 }
 
 #form-container {
-  background-color: cadetblue;
+
+  height: 100%;
+  width: 100%;
 }
 input {
   padding: 9px;
@@ -159,16 +161,16 @@ input {
   background: linear-gradient(0.2turn, rgb(221, 25, 25), blanchedalmond);
 }
 
-.order-btn {
+/* .order-btn {
   width: 150px;
   height: 60px;
   font-size: 20px;
   background-color: transparent;
   border: 2px solid white;
   margin: 20px;
-}
+} */
 
-.order-btn > a {
+/* .order-btn > a {
   text-decoration: none;
   color: white;
 }
@@ -179,7 +181,45 @@ input {
 
 .order-btn:active {
   scale: 97%;
+} */
+.order-btn {
+  text-decoration: none;
+  color: yellow;
+  transition: background-color 1s;
+  background-color: black;
 }
+.order-btn,a:hover {
+  background-color: red;
+  scale: 1;
+}
+.order-btn > a {
+  color: black;
+}
+
+
+.order-btn > a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  width: 200px;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.order-btn > a:hover {
+  cursor: pointer;
+}
+
+.order-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-inline: auto;
+  margin-block: 20px;
+}
+
 
 .next-btn {
   width: 150px;
@@ -197,6 +237,7 @@ input {
 
 .next-btn:hover {
   scale: 103%;
+  color:black
 }
 
 .next-btn:active {
