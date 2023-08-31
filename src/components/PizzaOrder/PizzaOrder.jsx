@@ -1,25 +1,22 @@
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-
-
-
-import { Link, useHistory} from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { useState } from "react";
 
 export default function PizzaOrder({ addOrder }) {
   const order = useSelector((store) => store.orderReducer);
 
-  const history=useHistory();
-  const [showAlert, setShowAlert]=useState(false);
- 
+  const history = useHistory();
+  const [showAlert, setShowAlert] = useState(false);
+
   const handlePlaceOrder = () => {
     addOrder();
     setShowAlert(true);
     setTimeout(() => {
       setShowAlert(false);
-      history.push('/pizza');
+      history.push("/pizza");
     }, 5000);
   };
 
@@ -35,8 +32,9 @@ export default function PizzaOrder({ addOrder }) {
         </ul>
         <ul className="list">
           <h1>Method</h1>
-        <li className="order-type">{order.type ? `For ${order.type}` : ""}</li>
-
+          <li className="order-type">
+            {order.type ? `For ${order.type}` : ""}
+          </li>
         </ul>
       </div>
       <table>
@@ -55,15 +53,10 @@ export default function PizzaOrder({ addOrder }) {
           ))}
         </tbody>
       </table>
-    
+
       <h2>Total: ${order.total}</h2>
-      
-      {showAlert && (
-       
-          alert(`Thank you for your order! Redirecting.`)
-        
-        
-      )}
+
+      {showAlert && alert(`Thank you for your order! Redirecting.`)}
 
       <button className="order-btn" onClick={handlePlaceOrder}>
         Place order
