@@ -3,11 +3,25 @@ import { useSelector } from "react-redux";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 
-import { Link } from "react-router-dom";
+
+
+import { Link, useHistory} from "react-router-dom";
+import { useState } from "react";
 
 export default function PizzaOrder({ addOrder }) {
   const order = useSelector((store) => store.orderReducer);
-  console.log(order.pizzas);
+
+  const history=useHistory();
+  const [showAlert, setShowAlert]=useState(false);
+ 
+  const handlePlaceOrder = () => {
+    addOrder();
+    setShowAlert(true);
+    setTimeout(() => {
+      setShowAlert(false);
+      history.push('/pizza');
+    }, 5000);
+  };
 
   return (
     <>
@@ -43,9 +57,16 @@ export default function PizzaOrder({ addOrder }) {
       </table>
     
       <h2>Total: ${order.total}</h2>
+      
+      {showAlert && (
+       
+          alert(`Thank you for your order! Redirecting.`)
+        
+        
+      )}
 
-      <button className="order-btn" onClick={addOrder}>
-        <Link to="/pizza">Place Order</Link>
+      <button className="order-btn" onClick={handlePlaceOrder}>
+        Place order
       </button>
     </>
   );
